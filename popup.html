@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Bookmarker</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+
+<header class="app-header">
+  <div class="app-title">📌 Bookmarker</div>
+  <div class="app-subtitle">Your personal link vault</div>
+</header>
+
+<section class="card">
+  <label class="label">Add tags</label>
+
+  <div class="inline-save">
+    <input
+      type="text"
+      id="tagsInput"
+      placeholder="react, backend, docs"
+    />
+    <button id="saveBtn" class="primary">Save</button>
+  </div>
+</section>
+
+<section class="card">
+  <input
+    type="search"
+    id="searchInput"
+    placeholder="Search bookmarks..."
+  />
+  <div id="tagFilters" class="tag-filter"></div>
+</section>
+
+<section class="list-wrapper">
+  <ul id="bookmarkList"></ul>
+</section>
+
+<footer class="footer">
+  <button id="exportBtn">Export</button>
+  <button id="importBtn">Import</button>
+  <input type="file" id="fileInput" hidden accept=".json" />
+</footer>
+
+<script src="storage.js"></script>
+<script src="autotags.js"></script>
+<script src="popup.js"></script>
+</body>
+</html>

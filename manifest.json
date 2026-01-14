@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Bookmarker",
+  "version": "1.0.0",
+  "description": "Your personal link vault - Save, organize, and search bookmarks with smart tagging",
+
+  "permissions": ["storage", "tabs", "activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "action": {
+    "default_popup": "popup.html"
+  },
+
+  "commands": {
+    "save-bookmark": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+S",
+        "mac": "Command+Shift+S"
+      },
+      "description": "Save current tab to Bookmarker"
+    }
+  }
+}
